@@ -1,0 +1,49 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.mmm_info ul li {
+  width: 100%;
+  //height: 80/@base;
+  padding: 0 10/@base;
+}
+.mmm_info ul {
+  border: 2px solid silver;
+}
+.mmm_info  .info_title {
+  border-bottom: solid 1px silver;
+  line-height: 80/@base;
+  position: relative;
+  font-size: 25/@base;
+  font-weight: 700;
+}
+.mmm_info ul  .info_title .info_title_a{
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mmm_info ul  .info_title i{
+  position: absolute;
+  right: 10/@base;
+  top: 30/@base;
+}
+.mmm_info ul li .mmm_info_category li{
+  float: left;
+  border-right: solid 1px silver;
+  border-bottom: solid 1px silver;
+  width: 33%;
+  text-align: center;
+}
+.mmm_info_category li a{
+  height: 80/@base;
+  float: left;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.move{
+  display: none;
+}

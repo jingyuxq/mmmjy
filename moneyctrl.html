@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="javascript:history.go(-1)"><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <div class="title fl" >省钱控 - 最新优惠</div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="mmm_product clearfix">
+        <div  class="mmm_product_info">
+            <ul class="clearfix">
+                <!--坑-->
+
+            </ul>
+        </div>
+    </div>
+    <div class="mui-content-padded">
+        <ul class="mui-pager">
+            <li class="mui-previous">
+                <a href="javascript:;">
+                    上一页
+                </a>
+            </li>
+            <input>
+            <li class="mui-next">
+                <a href="javascript:;">
+                    下一页
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+<script type="text/html" id="productTpl">
+  {{each  result v i }}
+  <li>
+      <!--productId-->
+      <a href="#" class="clearfix">
+          {{# v.productImgSm }}
+          <div class="info_right">
+              <div class="info_right_title">
+                  <h3 class="fl">{{v.productName}}</h3>
+                  <p class="fl">{{v.productPinkage}}</p>
+              </div>
+              <div class="info_right_info clearfix">
+                  <p class="fl">{{v.productTime}}</p>
+                  <p class="fr">{{v.productComCount}}</p>
+              </div>
+          </div>
+      </a>
+  </li>
+    {{/each}}
+</script>
+
+
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/moneyctrl.js"></script>
+</html>

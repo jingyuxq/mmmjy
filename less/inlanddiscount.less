@@ -1,0 +1,26 @@
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.product_info ul li {
+  padding: 30/@base 15/@base 0;
+  border-bottom: 1px solid silver;
+  border-right: 1px solid silver;
+  height: 525/@base;
+  width: 50%;
+}
+.product_info ul li img{
+  width: 278/@base;
+  height: 278/@base;
+  margin: 0 auto;
+}
+.product_info ul li h3{
+  font-size: 25/@base;
+
+}
+.product_info ul li  p{
+  padding-top: 30/@base;
+  height: 50/@base;
+  font-size: 25/@base;
+}

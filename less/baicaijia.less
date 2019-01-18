@@ -1,0 +1,274 @@
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.container{
+  padding-top: 150/@base;
+}
+.container  .mmm_header {
+  background-color: #f4483e;
+}
+.mui-scroll{
+  //top: 100/@base;
+  width: 2500/@base;
+}
+.mui-scroll-wrapper{
+  height: 75/@base;
+  top: 75/@base;
+}
+.mui-scroll ul{
+  //overflow: hidden;
+  width: 2500/@base;
+}
+.mui-scroll ul li{
+  height: 75/@base;
+  font-size: 25/@base;
+  padding:0  25/@base ;
+  float: left;
+  line-height: 75/@base;
+}
+.mui-scroll ul li.current{
+  border-bottom: .04rem solid #e12a2b;
+  color: #e52f26;
+}
+.mui-scroll ul li.current a{
+  color: #e52f26;
+}
+.product ul li{
+  height: 290/@base;
+  margin-top: 10/@base;
+  padding: 10/@base 20/@base;
+}
+.product ul li img{
+  width: 255/@base;
+  height: 255/@base;
+  background-size: cover;
+}
+.box{
+  padding-left: 30/@base;
+}
+.product  li{
+  position: relative;
+}
+.postage{
+  font-size: 25/@base;
+  height: 30/@base;
+  line-height: 30/@base;
+}
+.price {
+   color: #fc0512;
+  float: left;
+  height: 100/@base;
+  line-height: 100/@base  ;
+}
+.price p{
+  font-size: 25/@base;
+  color: silver;
+}
+.bar a{
+  display: none;
+}
+.bar i{
+  display: inline-block;
+  width: 2.2rem;
+  height: .4rem;
+  line-height: .4rem;
+  border: 1px solid #fb060a;
+  border-radius: .07rem;
+  font-size: .19rem;
+  background-color: #ffb7b7;
+  position: relative;
+  color: #fff;
+  text-align: center;
+
+}
+.bar i em{
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fc353a;
+  border-radius: .07rem;
+}
+.bar b{
+  font-size: .32rem;
+  color: #fd3c2c;
+  font-weight: 400;
+  padding-left: .13rem;
+}
+.conpon{
+  width: 2.87rem;
+  height: .67rem;
+  display: inline-block;
+  left: .16rem;
+  line-height: .6rem;
+  text-align: center;
+  border: .04rem dashed #ef898b;
+  font-size: .27rem;
+  margin-top: 30/@base;
+  float: left;
+}
+.link{
+  width: 1.53rem;
+  height: .60rem;
+  position: absolute;
+  bottom: 15/@base;
+  right: 15/@base;
+  border: .03rem solid #ff4948;
+  background-color: #ff5e5d;
+  border-radius: 5px;
+  font-size: .24rem;
+  text-align: center;
+  line-height: .55rem;
+}
+.bargain_nav {
+  width: 100%;
+  height: 1.07rem;
+  background-color: #fff;
+}
+.bargain_nav .nav_left {
+  padding-left: .13rem;
+  height: 1.07rem;
+  border-right: 1px solid #c4c4c4;
+  width: 8.93rem;
+  overflow: hidden;
+}
+.bargain_nav .nav_left ul {
+  overflow: hidden;
+  width: 26.67rem;
+}
+.bargain_nav .nav_left ul li {
+  height: 100%;
+  float: left;
+  line-height: 1.07rem;
+}
+.bargain_nav .nav_left ul a {
+  display: inline-block;
+  height: 1.07rem;
+  padding: 0 .33rem;
+  font-size: .32rem;
+}
+.bargain_nav .nav_left ul a.active {
+  border-bottom: .04rem solid #e12a2b;
+  color: #e52f26;
+}
+.bargain_nav .nav_left ul a:focus {
+  border-bottom: .04rem solid #e12a2b;
+  color: #e52f26;
+}
+.bargain_nav .nav_right {
+  float: right;
+  width: 1.07rem;
+  height: 1.07rem;
+  background-color: #f4f4f4;
+  font-size: .8rem;
+  padding-left: .13rem;
+  line-height: 1rem;
+  color: #585757;
+}
+.bargain_conttent li {
+  margin-top: .13rem;
+  width: 100%;
+  height: 4rem;
+  padding: .27rem .13rem;
+  background-color: #fff;
+}
+.bargain_conttent li .img {
+  float: left;
+  width: 3.47rem;
+  height: 3.47rem;
+}
+.bargain_conttent li .info_post {
+  overflow: hidden;
+  height: 100%;
+  padding-left: .13rem;
+  position: relative;
+}
+.bargain_conttent li .postage {
+  font-size: .32rem;
+  padding-top: .07rem;
+}
+.bargain_conttent li .price {
+  padding-top: .27rem;
+  font-size: .43rem;
+  color: #fc0512;
+}
+.bargain_conttent li .price i {
+  font-size: .32rem;
+}
+.bargain_conttent li .price em {
+  font-size: 0.27rem;
+}
+.bargain_conttent li .price del {
+  font-size: .32rem;
+  color: #a79f9a;
+}
+.bargain_conttent li .bar {
+  padding-top: 10px;
+}
+.bargain_conttent li .bar i {
+  display: inline-block;
+  width: 2.2rem;
+  height: .4rem;
+  line-height: .4rem;
+  border: 1px solid #fb060a;
+  border-radius: .07rem;
+  font-size: .19rem;
+  background-color: #ffb7b7;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.bargain_conttent li .bar i em {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fc353a;
+  border-radius: .07rem;
+}
+.bargain_conttent li .bar i span {
+  z-index: 999;
+  position: relative;
+}
+.bargain_conttent li .bar b {
+  font-size: .32rem;
+  color: #fd3c2c;
+  font-weight: 400;
+  padding-left: .13rem;
+}
+.bargain_conttent li .conpon {
+  width: 2.87rem;
+  height: .67rem;
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: .16rem;
+  line-height: .6rem;
+  text-align: center;
+  border: .04rem dashed #ef898b;
+  font-size: .27rem;
+}
+.bargain_conttent li .conpon a {
+  color: #fc0512;
+}
+.bargain_conttent li .link {
+  width: 1.53rem;
+  height: .60rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: .03rem solid #ff4948;
+  background-color: #ff5e5d;
+  border-radius: 5px;
+  font-size: .24rem;
+  text-align: center;
+  line-height: .55rem;
+}
+.bargain_conttent li .link a {
+  color: #fff;
+}
+

@@ -1,0 +1,74 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.mmm_header  .fa-chevron-left{
+  width: 28/@base;
+  height: 40/@base;
+  color: white;
+  font-size: 30/@base;
+}
+.mmm_header .title{
+  height: 60/@base;
+  line-height: 60/@base;
+  color: white;
+  font-size: 30/@base;
+}
+.product_container{
+  padding: 20/@base;
+}
+.product_container h3{
+  font-size: 30/@base;
+}
+.product_container .info_title{
+  height: 90/@base;
+  width: 100%;
+  padding: 30/@base 0;
+
+}
+.info_content .img_sm{
+  width: 200/@base;
+  height: 200/@base;
+  float: right;
+}
+.info p{
+  margin-top: 30/@base;
+  font-size: 20/@base;
+  color: black;
+}
+.big_img img{
+  width: 500/@base;
+  height: 500/@base;
+  margin: 0 auto;
+}
+
+.pace ul {
+  padding: 20/@base;
+  width: 270/@base;
+  box-shadow: 1px 1px 1px 1px slategray;
+
+  margin: 30/@base auto;
+}
+.pace ul li{
+  border-bottom: dashed 1px silver;
+  height: 40/@base;
+  line-height: 40/@base;
+}
+.pace ul li strong{
+  float: right;
+  color: #f18b4b;
+}
+.info_content {
+  line-height: 22/@base;
+}
+.shopping{
+  height: 60/@base;
+  width: 80%;
+  background-color: #ff9000;
+  margin: 15/@base auto;
+  text-align: center;
+  line-height: 60/@base;
+  color: white;
+}

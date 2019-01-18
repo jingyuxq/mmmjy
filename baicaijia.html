@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+    <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <div class="title fl" >白菜价—淘宝内部券</div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+    <div class="mui-scroll-wrapper ">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+            <ul class="clearfix">
+                <!--坑-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="bargain_conttent clearfix">
+        <ul class="clearfix">
+            <!--<li>-->
+               <!--<div class="img fl">-->
+                  <!--<img src="images/ic_bcj.png">-->
+               <!--</div>-->
+                <!--<div class="fl box">-->
+                    <!--<div class="postage">-->
+                        <!--<span>[11]</span>1111-->
+                    <!--</div>-->
+                    <!--<div class="price">-->
+                        <!--<em class="fl">￥0.0</em>-->
+                        <!--<p class="fl">￥0</p>-->
+                    <!--</div>-->
+                    <!--<div class="bar clearfix">-->
+                        <!--<i>-->
+                            <!--<em></em>-->
+                            <!--<b>1%</b>-->
+                        <!--</i>-->
+                        <!--<b>1</b>-->
+                    <!--</div >-->
+                    <!--<div class="conpon">-->
+                       <!--<a href="#">点此领15元优惠券</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="link">-->
+                    <!--<a href="#">下单链接</a>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+
+</body>
+<script type="text/html" id="navTpl">
+{{each result v i}}
+<li class="{{i === 0 ? 'current' : ''}} "><a href="#" class="clearfix" data-id="{{v.titleId}}">{{v.title}}</a> </li>
+{{/each}}
+</script>
+<script type="text/template" id="con_tmp">
+    {{ each result v}}
+    <li>
+        <div class="img">
+            {{@v.productImg}}
+        </div>
+        <!-- postage包邮 -->
+        <div class="info_post">
+            <div class="postage">
+                {{@v.productName}}
+            </div>
+            <div class="price">
+                {{@v.productPrice}}
+            </div>
+            {{@v.productCouponRemain}}
+            <div class="conpon">
+                {{@v.productCoupon}}
+            </div>
+            <div class="link">
+                <!-- <a biz-itemid="56297410_8818824_54778388" isconvert="1" href="http://s.click.taobao.com/3HlIdQx" target="_blank">下单链接</a> -->
+                {{@v.productHref}}
+            </div>
+        </div>
+    </li>
+    {{ /each }}
+</script>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/baicaijia.js"></script>
+</html>

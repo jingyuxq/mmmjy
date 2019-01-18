@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="#"><img src="images/header_logo.png"></a>
+        </div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+    <div class="mmm_search">
+        <input placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+
+    <div class="mmm_info clearfix">
+        <ul  class="iiid">
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--大 家 电-->
+                    <!--<i class="fa fa-chevron-down"></i>-->
+                <!--</a>-->
+                <!--<ul class="mmm_info_category clearfix">-->
+                    <!--<li class="mmm_info_category">-->
+                        <!--<a href="#">电视</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">电视</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#">电视</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+<script type="text/html" id="infoTpl">
+    {{each result v i}}
+    <li data-id="{{v.titleId}}" class="info_title">
+        <a href="#" class="info_title_a">
+            {{v.title}}
+            <i class="fa fa-chevron-down"></i>
+        </a>
+        <ul class="mmm_info_category clearfix" >
+        </ul>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="categoryTpl">
+    {{each result v i}}
+    <li class="mmm_info_category clearfix">
+        <a href="productlist.html?categoryid={{ v.categoryId }}&value={{v.category}}" class="clearfix">{{v.category}}</a>
+    </li>
+    {{/each}}
+</script>
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/category.js"></script>
+</html>

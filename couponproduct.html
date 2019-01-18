@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/couponproduct.css">
+    <link rel="stylesheet" href="css/coupon.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <div class="title fl" >优惠券</div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="con">
+        <p class="notes">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+        <ul class="info clearfix">
+            <!--<li>-->
+                <!--<div class="img_box fl">-->
+                    <!--<img src="images/ic_bcj.png">-->
+                <!--</div>-->
+                <!--<div class="fr info_right">-->
+                    <!--<p class="txt">C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>-->
+                    <!--<p class="price">￥ 28</p>-->
+                    <!--<div class="time">有效期至10月31日</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+    <div class="mm_madle">
+        <div class="pic">
+            <div class="img_box">
+            <img src="images/ic_bcj.png" alt="">
+            </div>
+            <span class="arrow_left fa fa-angle-left"></span>
+            <span class="arrow_right fa fa-angle-right"></span>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="productTpl">
+{{each result v i}}
+<li data-id="{{v.couponProductId}}">
+    <div class="img_box fl" >
+        {{# v.couponProductImg}}
+    </div>
+    <div class="fr info_right">
+        <p class="txt">{{v.couponProductName}}</p>
+        <p class="price">{{v.couponProductPrice}}</p>
+        <div class="time">{{v.couponProductTime}}</div>
+    </div>
+</li>
+{{/each}}
+</script>
+
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/couponproduct.js"></script>
+</html>

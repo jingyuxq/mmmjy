@@ -1,0 +1,102 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.mmm_nav .nav_left li{
+  width: 30%;
+  height: 75/@base;
+  border-bottom: solid 1px silver;
+  line-height: 75/@base;
+}
+.mmm_nav .nav_left>ul{
+  position: relative;
+}
+html,body{
+  width: 750/@base;
+}
+.container{
+  width: 750/@base;
+}
+.mmm_nav .nav_left li a{
+  display: block;
+  margin: 0 auto;
+  font-size: 25/@base;
+}
+.mmm_nav {
+position: relative;
+}
+.mmm_nav .nav_right{
+  position: absolute;
+  width: 10%;
+  height: 75/@base;
+  top: 0;
+  right: 0;
+  font-size: 50/@base;
+  line-height: 75/@base;
+  text-align: center;
+  margin-top: 10/@base;
+  border-radius: 50%;
+  border: solid 1px silver;
+
+}
+.product_list .pic img{
+  width: 335/@base;
+  height: 350/@base;
+}
+.product_list ul li{
+  margin-top: 15/@base;
+  margin-left: 15/@base;
+  padding: 10/@base;
+  width: 335/@base;
+  float: left;
+  margin-right: 11/@base;
+
+}
+.product_list ul li p{
+  font-size: 20/@base;
+  color: black;
+  margin-top: 10/@base;
+}
+.product_list ul li span:first-child{
+  color: #f65016;
+  font-size: .32rem;
+  height: 40/@base;
+  line-height: 40/@base;
+}
+.product_list ul li span:nth-child(2){
+  float: right;
+  text-align: center;
+  font-size: .24rem;
+  border: 2px solid #ff8500;
+  background-color: #ff9501;
+  border-radius: 5px;
+  color: #fff;
+  height: 40/@base;
+  line-height: 40/@base;
+  width: 80/@base;
+}
+.nav_left .hidden{
+  position: absolute;
+  top: 75/@base;
+  left: 0;
+}
+.nav_left .hidden  li{
+  height: 70/@base;
+  width: 750/@base;
+  border-bottom: 1px solid silver;
+  display: block;
+  background-color: white;
+  text-align: left;
+  padding-left: 20/@base;
+  line-height: 70/@base;
+}
+.nav_left>ul>li>ul{
+  display: none;
+}
+.nav_left>ul>li>ul.show{
+  display: block;
+}
+
+

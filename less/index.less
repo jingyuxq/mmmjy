@@ -1,0 +1,93 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+// 使用rem布局
+// (1) 使用 rem 为单位, 根据基准值转换 px 成 rem
+// (2) 动态设置屏幕的 html 根字体大小
+
+
+
+// 苏宁主题色
+
+input{
+  border: none;
+}
+.mmm_nav ul{
+  padding: 10/@base 0;
+
+}
+.mmm_nav ul li{
+  float: left;
+  width: 25%;
+  height: 135/@base;
+  text-align: center;
+}
+.mmm_nav ul li a{
+  display: block;
+  padding: 10/@base 0;
+  margin-bottom: 10/@base
+}
+
+.mmm_nav ul li img{
+  width: 72/@base;
+  height: 72/@base;
+  margin: 0 auto;
+}
+.mmm_nav ul li p{
+  height: 31/@base;
+  line-height: 31/@base ;
+  font-size: 12/@base;
+}
+.mmm_product_title,
+.mmm_footer_nav{
+  height: 50/@base;
+  width: 100%;
+  background-color:  #ff841d;
+  padding: 10/@base 15/@base;
+}
+.mmm_product_title a，
+.mmm_footer_nav a{
+  color: whitesmoke;
+}
+
+.mmm_product_title img,
+.mmm_footer_nav img{
+  width: 28/@base;
+  height: 28/@base;
+  background-size: cover;
+  float: right;
+}
+.mmm_product_info li{
+  height: 185/@base;
+  width: 100%;
+}
+.mmm_product_info li a{
+  display: block;
+  padding: 20/@base 10/@base;
+}
+.mmm_product_info li a img{
+  height: 150/@base;
+  width: 147/@base;
+  display: block;
+  float: left;
+}
+.mmm_product_info li .info_right{
+  float: right;
+  padding: 25/@base;
+  width: 70%;
+
+}
+.info_right_title{
+  height: 85/@base;
+  width: 100%;
+}
+.info_right_title p{
+  color: crimson;
+
+}
+.mmm_product_info{
+  background-color: white;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <div class="title fl" >国内折扣</div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="mmm_nav clearfix">
+        <div class="nav_right fa fa-search"></div>
+        <div class="nav_left clearfix">
+            <ul class="clearfix">
+                <li class="clearfix first">
+                    <a href="#">
+                        <span>京东</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="hidden clearfix" >
+                    </ul>
+                </li>
+                <li class="clearfix two">
+                    <a href="#">
+                        <span>华北</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="hidden clearfix" >
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="there">
+                        <span>全部</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="hidden clearfix" >
+                        <li>全部价格</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="product_list clearfix">
+        <ul class="clearfix">
+            <!--<li >-->
+                <!--<div class="pic clearfix">-->
+                    <!--<img src="images/ic_bcj.png">-->
+                <!--</div>-->
+                <!--<p>11111</p>-->
+                <!--<div class="price">-->
+                    <!--<span>¥0.50</span>-->
+                    <!--<span>去凑单</span>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+<script type="text/html" id="jdTpl">
+{{each result v i}}
+<li data-shopId="{{v.shopId}}"><a href="#" >{{v.shopName}}</a></li>
+{{/each}}
+</script>
+<script type="text/html" id="hbTpl">
+    {{each result v i}}
+    <li  data-areaId="{{v.areaId}}"><a href="#">{{v.areaName}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="productTpl">
+{{each result v i}}
+<li >
+    <div class="pic clearfix">
+        <img src="{{v.productImg}}">
+    </div>
+    <p>{{v.productName}}</p>
+    <div class="price">
+        <span>{{v.productPrice}}</span>
+        <span>去凑单</span>
+    </div>
+</li>
+{{/each}}
+</script>
+
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/gsproduct.js"></script>
+</html>

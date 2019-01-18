@@ -1,0 +1,113 @@
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.box{
+  line-height: 70/@base;
+}
+.box{
+  background-image: linear-gradient(#ffffff,#cccccc,#ffffff);
+  width: 100%;
+  height: 70/@base;
+}
+.mui-content-padded  input{
+  border-radius: 50/@base;
+  text-align: center;
+}
+.product_bijia{
+  position: relative;
+}
+.product_bijia .product_name{
+  height: 150/@base;
+  padding: 40/@base 50/@base 0;
+  text-align: center;
+  line-height: 100/@base;
+}
+.product_bijia .product_pic{
+  width: 320/@base;
+  height: 320/@base;
+  display: block;
+  margin: 0 auto;
+}
+.product_bijia .collect{
+  width: 85/@base;
+  height: 85/@base;
+  background-color: #2ac845;
+  color: white;
+  text-align: center;
+  line-height: 85/@base;
+  border-radius: 50%;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 30/@base;
+}
+.product_nav ul li{
+  float: left;
+  width: 33%;
+  height: 70/@base;
+  margin-top: 10/@base;
+  background-color: #ffc833;
+  text-align: center;
+  line-height: 70/@base;
+  border: solid  1px slategray;
+}
+.product_nav ul li:first-child{
+  background-color: #ff9b19;
+}
+.mmm_price{
+  border-bottom: 1px solid slategray;
+  padding: 0 15/@base;
+}
+.mmm_price div{
+  height: 80/@base;
+  width: 20%;
+  float: left;
+  line-height: 80/@base;
+
+}
+.mmm_price div:nth-child(2){
+  color: red;
+}
+.mmm_price div:first-child{
+  width: 60%;
+  font-size: 30/@base;
+}
+.mmm_price div:last-child{
+  font-size: 20/@base;
+}
+.notes{
+  height: 110/@base;
+  padding: 18/@base 15/@base;
+  width: 100%;
+  color: #808385;
+  font-size: 18/@base;
+}
+.commont_title{
+  height: 70/@base;
+  width: 100%;
+  border-top: 2px solid #606060;
+  background-color: #dbdbdb;
+  text-align: center;
+  line-height: 70/@base;
+  font-size: 20/@base;
+}
+.commont_content ul li{
+  padding: 18/@base 15/@base 5/@base;
+  border-bottom: 1px solid silver;
+}
+.commont_footer{
+  margin-top: 20/@base;
+  text-align: center;
+  display: block;
+  height: .8rem;
+  border: .03rem solid #b4b4b4;
+  border-radius: .13rem;
+  line-height: .75rem;
+  font-size: .32rem;
+  background-image: linear-gradient(#f1f1f1, #d4d4d4);
+}
+.magin{
+  margin-top: 20/@base;
+}

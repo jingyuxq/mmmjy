@@ -1,0 +1,104 @@
+
+// 设计图尺寸 750
+@design: 750;
+// 基准值 = 设计图尺寸 / 10
+@base: 75rem;
+.container{
+  padding-top: 65/@base;
+}
+.mmm_header{
+  background-color: #ff841d;
+  width: 100%;
+  height: 65/@base;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.mmm_header_left {
+  float: left;
+  height: 65/@base;
+  width: 290/@base;
+  padding: 14/@base 17/@base;
+}
+.mmm_header_left a{
+  display: block;
+}
+.mmm_header_left a img{
+  width: 255/@base;
+  height: 35@base;
+}
+.mmm_header_right{
+  float: right;
+  width: 80/@base;
+  height: 65/@base;
+  padding: 14/@base 17/@base;
+}
+.mmm_header_right a{
+  display: block;
+}
+.mmm_header_right a img{
+  //width: 456/@base;
+  //height: 45/@base;
+  background-size: cover;
+
+}
+.mmm_search{
+  width: 100%;
+  height: 72/@base;
+  border-bottom: solid 1px lightblue;
+  padding: 12/@base;
+  position: relative;
+}
+.mmm_search input{
+  width: 100%;
+  height: 48/@base;
+  border-radius: 50px;
+  padding-left: 15/@base;
+  background-color: #f1f1f1;
+}
+.mmm_search button{
+  width: 90/@base;
+  height: 48/@base;
+  background-color: #ff841d;
+  color: #f1f1f1;
+  border-radius: 50px;
+  top: 10/@base;
+  right:12/@base ;
+  position: absolute;
+}
+.mmm_footer{
+  margin-top: 14/@base;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+.mmm_footer a{
+  display: block;
+  float: left;
+  width:30%;
+  height: 50/@base;
+  text-align: center;
+  line-height:50/@base ;
+  border-right:1px solid silver ;
+}
+.mmm_footer a img{
+  height: 22/@base;
+  width: 22/@base;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.mmm_footer a:last-child{
+  width: 40%;
+  border-right: 1px solid transparent;
+}
+.mmm_footer_news{
+  width: 100%;
+  height: 88/@base;
+  padding: 28/@base;
+  text-align: center;
+}
+.mmm_footer_news a{
+  font-size: 12/@base;
+}
+.red{
+  color: red;
+}

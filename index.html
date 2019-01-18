@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+          <a href="#"><img src="images/header_logo.png"></a>
+        </div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+    <div class="mmm_search">
+        <input placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    <div class="mmm_nav clearfix">
+        <ul>
+            <!--坑-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<img src="images/ic_search.png">-->
+                    <!--<p>比价搜索</p>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="mmm_product clearfix">
+        <div  class="mmm_product_title">
+           <a href="#">超值折扣推荐</a>
+            <a>
+                <img src="images/more.png">
+            </a>
+        </div>
+        <div  class="mmm_product_info">
+            <ul class="clearfix">
+                <!--坑-->
+                <!--<li>-->
+                    <!--<a href="#" class="clearfix">-->
+                        <!--<img src="images/haitao.png">-->
+                        <!--<div class="info_right">-->
+                            <!--<div class="info_right_title">-->
+                                <!--<h3 class="fl">1</h3>-->
+                                <!--<p class="fl">1</p>-->
+                            <!--</div>-->
+                            <!--<div class="info_right_info clearfix">-->
+                                <!--<p class="fl">11111</p>-->
+                                <!--<p class="fr">22222</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div  class="mmm_footer_nav">
+        <a href="#">品牌排行</a>
+        <a>
+            <img src="images/more.png">
+        </a>
+    </div>
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+<script type="text/html" id="navTpl">
+ {{ each result v i }}
+    <li style="display:{{ i > 7 ?'none':'block' }}" data-type="{{ i>7?'1':'' }}">
+        <a href="{{v.titlehref}}" data-id="{{v.indexmenuId}}">
+            {{# v.img}}
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+ {{ /each }}
+</script>
+<script type="text/html" id="productTpl">
+  {{each result v i}}
+  <li>
+      <a href="moneyproduct.html?productid={{v.productId}}" class="clearfix">
+          {{# v.productImgLg}}
+          <div class="info_right">
+              <div class="info_right_title">
+                  <h6 style="display: inline-block">{{v.productName}}</h6>
+                  <p>{{v.productPinkage}}</p>
+              </div>
+              <div class="info_right_info clearfix">
+                  <p class="fl">{{v.productFrom}}|{{v.productTime}}</p>
+                  <p class="fr">{{v.productComCount}}</p>
+              </div>
+          </div>
+      </a>
+    {{/each}}
+</script>
+
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="js/index.js"></script>
+</html>

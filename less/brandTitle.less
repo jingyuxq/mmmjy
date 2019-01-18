@@ -1,0 +1,41 @@
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.navbox{
+  padding: 20/@base;
+}
+.navbox p{
+  padding-left: 10/@base;
+  border: .03rem solid #c4c4c4;
+  background-color: #ededed;
+  font-size: 30/@base;
+  color: #7c3c2d;
+  height: 80@base;
+  line-height: 80/@base;
+}
+.nav_title ul{
+  border: solid 2px silver;
+  background-color:#c4c4c4 ;
+  border-radius: 10/@base;
+}
+.nav_title ul li{
+  height: 78/@base;
+  line-height: 78/@base;
+  border-bottom: solid 1px seashell;
+  position: relative;
+}
+.nav_title ul li p{
+  font-size: 30/@base;
+  padding-left: 15/@base;
+  color: black;
+}
+.nav_title ul li a{
+  font-size: 30/@base;
+}
+.nav_title ul li a i{
+  position: absolute;
+  right: 20/@base;
+  top: 20/@base;
+}

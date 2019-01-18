@@ -1,0 +1,69 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+.nav_box{
+  height: 70/@base;
+  line-height: 70/@base;
+  color: #7c3c2d;
+  font-size: 25/@base;
+  padding-left: 20/@base;
+  border-bottom: solid 2px silver;
+  background-color: #ededed;
+}
+.brand_search ul li a{
+  padding: 20/@base;
+  height: 130/@base;
+  border-bottom: solid 1px silver;
+  display: block;
+  position: relative;
+}
+.brand_search ul li span:first-child{
+  width: 40/@base;
+  height: 40/@base;
+  color: white;
+  background-color: red;
+  text-align: center;
+  line-height: 40/@base;
+  display: block;
+  float: left;
+}
+.brand_search ul li .info{
+  padding-left: 20/@base;
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+}
+.brand_search ul li .info div{
+  font-size: 30/@base;
+  color: black;
+  height: 40/@base;
+  line-height: 40/@base;
+  margin-bottom: 20/@base;
+}
+.brand_search ul li .info p{
+  font-size: 25/@base;
+
+}
+.fa-angle-right{
+  font-size: 50/@base;
+  position: absolute;
+  right: 20/@base;
+  top: 30/@base;
+  color:slategray;
+
+}
+.brand_search ul li span.dfcolor{
+  background-color: silver;
+}
+.brand_search ul li:first-child span.dfcolor{
+  background-color: red;
+}
+.brand_search ul li:nth-child(2) span.dfcolor{
+  background-color: yellow;
+}
+.brand_search ul li:nth-child(3) span.dfcolor{
+  background-color: green;
+}

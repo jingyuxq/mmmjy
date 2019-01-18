@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="index.html"><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <div class="title fl" >国内折扣</div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="product_container clearfix">
+        <div class="product_container1">
+       <!--<div class="title">-->
+           <!--<h3>-->
+               <!--移动端凑单品：海天 鲜味 生抽 1.28L-->
+           <!--</h3>-->
+       <!--</div>-->
+        <!--<div class="info">-->
+            <!--<div class="info_title">-->
+                <!--<span>京东商城</span>-->
+                <!--<span>10-25 14:10</span>-->
+                <!--<span>小编烟火 / 慢慢买</span>-->
+            <!--</div>-->
+            <!--<div class="info_content clearfix">-->
+                <!--<div class="img_sm">-->
+                    <!--<img  src="images/ic_bcj.png">-->
+                <!--</div>-->
+                <!--海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。-->
+
+            <!--</div>-->
+            <!--<p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>-->
+            <!--<div class="big_img">-->
+                <!--<img src="images/ic_bcj.png">-->
+            <!--</div>-->
+        <!--</div>-->
+        </div>
+        <div class="pace clearfix">
+            <!--<ul id="disstorck ">-->
+                <!--<li>-->
+                    <!--<a class="">-->
+                        <!--<span>11<strong>22</strong></span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+        <div class="shopping">
+            前往购买
+        </div>
+        <div class="img_box">
+            <img src="./images/mmbweixin2.png">
+        </div>
+        <div class="comment clearfix">
+        <!--keng-->
+        </div>
+    </div>
+
+
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+<script type="text/html" id="place">
+    {{each result v i }}
+    <div class="title">
+        <h3>
+            {{v.productName}}
+        </h3>
+    </div>
+    <div class="info">
+        <div class="info_title">
+            <span>{{v.productFrom}}</span>
+            <span>{{v.productTime}}</span>
+            <span>{{v.productTips}}</span>
+        </div>
+        <div class="info_content clearfix">
+            <div class="img_sm">
+                {{# v.productImgSm}}
+            </div>
+           {{v.productInfo2}}
+
+        </div>
+        <p>{{v.productInfo1}}</p>
+        <div class="big_img">
+            {{# v.productImg2}}
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="zdplace">
+{{each result v i }}
+{{# v.productCity}}
+{{/each}}
+</script>
+<script type="text/html" id="comment">
+{{each result v i }}
+    {{#  v.productComment}}
+{{/each}}
+</script>
+
+
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/moneyproduct.js"></script>
+</html>

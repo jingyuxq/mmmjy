@@ -1,0 +1,44 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+@import "common";
+// 使用rem布局
+.box{
+  background-image: linear-gradient(#ffffff,#cccccc,#ffffff);
+  width: 100%;
+  height: 70/@base;
+}
+.container{
+  padding: 0;
+}
+.container ul li{
+  padding: 25/@base 10/@base;
+  width: 100%;
+  height: 240/@base;
+  border-bottom: solid 1px silver;
+}
+.container ul li a{
+  display: block;
+}
+.container ul li .pic{
+   width: 160/@base;
+  height: 160/@base;
+}
+.container ul li .info{
+  padding-left: 10/@base;
+  width: 70%;
+}
+.container ul li .info div{
+  height: 50/@base;
+  width: 100%;
+}
+.box{
+  line-height: 70/@base;
+}
+.mui-content-padded  input{
+  border-radius: 50/@base;
+  text-align: center;
+
+}

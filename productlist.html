@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/productlist.css">
+</head>
+<body>
+<div class="container clearfix">
+    <div class="mmm_header ">
+        <div class="mmm_header_left clearfix">
+            <a href="#"><img src="images/header_logo.png"></a>
+        </div>
+        <div class="mmm_header_right">
+            <a href="#">
+                <img src="images/header_app.png">
+            </a>
+        </div>
+    </div>
+    <div class="mmm_search">
+        <input placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    <div class="box">
+        <a href="index.html">首页</a> > <a href="category.html">全部分类</a> > <a class="name"></a>
+    </div>
+    <div class="container clearfix">
+        <ul class="clearfix all">
+            <!--<li>-->
+                <!--<a href="#" class="clearfix">-->
+                    <!--<div class="fl pic">-->
+                        <!--<img src="images/ic_bcj.png">-->
+                    <!--</div>-->
+                    <!--<div class="fl info">-->
+                        <!--<div>-->
+                            <!--乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视-->
+                        <!--</div>-->
+                        <!--<div class="red">￥1999.00</div>-->
+                        <!--<div>-->
+                            <!--<span>1111</span>-->
+                            <!--<span>2222</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+
+    <div class="mmm_footer clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="index.html">
+            <img src="images/top.jpg">
+            回到顶部</a>
+    </div>
+    <div class="mmm_footer_news">
+        <div>
+            <a href="#" class="red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            <a href="#">--掌上比价平台</a>
+        </div>
+        <a>m.manmanbuy.com</a>
+    </div>
+</div>
+<script type="text/html" id="categoryTPL">
+  {{each result v i}}
+    <a href="productlist.html?categoryid={{v.categoryId}}&value={{v.category}}" >{{v.category}}</a>
+  {{/each}}
+</script>
+<script type="text/html" id="categoryTplall">
+{{each result v i}}
+<li data-pageall="{{v.productListId/10}}">
+    <a href="getproduct.html?productId={{v.productId}} " class="clearfix">
+        <div class="fl pic">
+            {{# v.productImg}}
+        </div>
+        <div class="fr info">
+            <div>
+                {{v.productName}}
+            </div>
+            <div class="red">{{v.productPrice}}</div>
+            <div>
+                <span>{{v.productQuote}}</span>
+                <span>{{v.productCom}}</span>
+            </div>
+        </div>
+    </a>
+</li>
+{{/each}}
+</script>
+
+</body>
+<script src="js/jquery/jquery-1.12.0.min.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/template/template-web.js"></script>
+<script src="js/productlist.js"></script>
+</html>
